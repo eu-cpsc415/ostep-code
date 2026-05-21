@@ -2,9 +2,9 @@
 #define __common_h__
 
 #include <assert.h>
+#include <stddef.h>
 #include <sys/stat.h>
 #include <sys/time.h>
-
 
 double GetTime()
 {
