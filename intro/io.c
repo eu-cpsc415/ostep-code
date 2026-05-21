@@ -1,12 +1,13 @@
-#include <stdio.h>
-#include <unistd.h>
 #include <assert.h>
 #include <fcntl.h>
+#include <stdio.h>
+#include <string.h>
 #include <sys/stat.h>
 #include <sys/types.h>
-#include <string.h>
+#include <unistd.h>
 
-int main(int argc, char *argv[]) {
+int main(int argc, char* argv[])
+{
     int fd = open("/tmp/file", O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
     assert(fd >= 0);
     char buffer[20];
@@ -17,4 +18,3 @@ int main(int argc, char *argv[]) {
     close(fd);
     return 0;
 }
-
