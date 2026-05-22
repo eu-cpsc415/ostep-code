@@ -29,14 +29,12 @@ int main(int argc, char* argv[])
     max = atoi(argv[1]);
 
     pthread_t p1, p2;
-    printf("main: begin [counter = %d] [%x]\n", counter,
-           (unsigned int)&counter);
+    printf("main: begin [counter = %d] [%p]\n", counter, &counter);
     Pthread_create(&p1, NULL, mythread, "A");
     Pthread_create(&p2, NULL, mythread, "B");
     // join waits for the threads to finish
     Pthread_join(p1, NULL);
     Pthread_join(p2, NULL);
-    printf("main: done\n [counter: %d]\n [should: %d]\n",
-           counter, max * 2);
+    printf("main: done\n [counter: %d]\n [should: %d]\n", counter, max * 2);
     return 0;
 }
