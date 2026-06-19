@@ -1,4 +1,3 @@
-
 ## Proportional Share Scheduling
 
 Code from OSTEP chapter [Scheduling: Proportional Share](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-lottery.pdf).
@@ -18,4 +17,3 @@ Run like this:
 which uses random seed '1' to run a little lottery 100 different times.
 
 Read the source code for details.
-

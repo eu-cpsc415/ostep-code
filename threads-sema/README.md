@@ -1,4 +1,3 @@
-
 # Fork/Join
 
 Simple example of the fork/join (i.e., waiting for a child) problem
@@ -10,7 +9,6 @@ Run `make` to build the code; run `join` to test it. Fun!
 prompt> make
 prompt> ./join
 ```
-
 
 # Binary Semaphores (Locks)
 
@@ -31,6 +29,7 @@ found in `producer_consumer.c`.
 
 Run `make` to build, and `producer_consumer` to test it.
 The program takes a few different arguments:
+
 - The number of buffers between the producer/consumer
 - The number of times a producer should produce something
 - The number of consumer threads
@@ -51,6 +50,7 @@ Code in `rwlock.c`. Build via `make`, run via `rwlock`.
 
 The dining philosophers example from the text is found herein, in a few
 different forms:
+
 - `dining_philosophers_deadlock.c`: code with deadlock
 - `dining_philosophers_deadlock_print.c`: code with deadlock, and some useful printing
 - `dining_philosophers_no_deadlock.c`: code without deadlock
@@ -58,16 +58,13 @@ different forms:
 
 Run `make` to build all of them with the highly primitive `Makefile`.
 
-
 # Zemaphores
 
 Code in `zemaphore.c`. We bet you can figure out the rest. This is just
 a small test of the Zemaphore with the fork/join problem.
 
-
 # Throttle
 
-Bonus code that shows how semaphores can be used to throttle how 
+Bonus code that shows how semaphores can be used to throttle how
 many different threads run through a certain bit of code at a time.
-Code in `throttle.c`. 
-
+Code in `throttle.c`.
