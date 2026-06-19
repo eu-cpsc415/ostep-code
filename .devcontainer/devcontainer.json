@@ -1,25 +1,15 @@
 {
-  "name": "OSTEP Code",
   "image": "mcr.microsoft.com/devcontainers/cpp:ubuntu24.04",
-  "features": {
-    "ghcr.io/devcontainers/features/common-utils:2": {
-      "installZsh": true,
-      "configureZshAsDefaultShell": true
-    }
-  },
   "customizations": {
     "vscode": {
       "extensions": [
         "llvm-vs-code-extensions.vscode-clangd",
-        "ms-vscode.cmake-tools",
-        "ms-vscode.makefile-tools",
         "esbenp.prettier-vscode"
       ],
       "settings": {
-        "terminal.integrated.defaultProfile.linux": "zsh"
+        "clangd.path": "/usr/bin/clangd"
       }
     }
   },
-  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y clangd",
-  "remoteUser": "vscode"
+  "postCreateCommand": "sudo apt update && sudo apt install -y clangd"
 }
