@@ -5,7 +5,6 @@
 #include <pthread.h>
 #include <sched.h>
 
-
 #ifdef __linux__
 #include <semaphore.h>
 #endif

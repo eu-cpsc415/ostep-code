@@ -1,23 +1,26 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <pthread.h>
-#include <unistd.h>
+#include "zemaphore.h"
 
 #include "common.h"
 #include "common_threads.h"
-#include "zemaphore.h"
+
+#include <pthread.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 
 Zem_t s;
 
-void *child(void *arg) {
+void* child(void* arg)
+{
     sleep(4);
     printf("child\n");
     Zem_post(&s); // signal here: child is done
     return NULL;
 }
 
-int main(int argc, char *argv[]) {
-    Zem_init(&s, 0); 
+int main(int argc, char* argv[])
+{
+    Zem_init(&s, 0);
     printf("parent: begin\n");
     pthread_t c;
     Pthread_create(&c, NULL, child, NULL);
@@ -25,4 +28,3 @@ int main(int argc, char *argv[]) {
     printf("parent: end\n");
     return 0;
 }
-    
